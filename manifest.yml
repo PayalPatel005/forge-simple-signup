@@ -1,0 +1,22 @@
+permissions:
+  scopes:
+    - "read:me"
+    - "read:confluence-props"
+    - "write:confluence-props"
+    - "read:jira-user"
+modules:
+  macro:
+    - key: simple-signup
+      function: main
+      title: Simple Sign-up
+      description: Need people to sign up for something? Use this instead of an Editor table!
+      config:
+        function: config
+  function:
+    - key: main
+      handler: index.run
+    - key: config
+      handler: config.run
+app:
+  id: "ari:cloud:ecosystem::app/6e82dc5b-7ce2-4f07-9169-3b439dba32dc"
+  name: simple-signup
